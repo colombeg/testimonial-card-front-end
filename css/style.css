@@ -1,12 +1,9 @@
-/* Put any custom CSS styles here.  */
-/* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   min-height: 100vh;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -22,7 +19,7 @@ body {
   position: fixed;
   bottom: 24px;
   left: 24px;
-  font-size: 11px;
+  font-size: 0.6875rem; /* 11 px */
   text-align: center;
   width: 100%;
 }
@@ -37,12 +34,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  @media (max-width: 768px) {
-    height: 60vh;
-  }
 }
 
-.container {
+.container-testimonial {
   background: #ffffff;
   border: #d2d6db 1px solid;
   border-radius: 10px;
@@ -52,44 +46,59 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 2px 0.5px #d2d6db;
+}
 
-  .top-side {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    .left {
-      width: 15%;
-      @media (max-width: 376px) {
-        width: 25%;
-      }
-      img {
-        height: 50px;
-      }
-    }
-    .right {
-      width: 70%;
-      font-weight: 600;
-      h1 {
-        font-size: 1.5rem;
-        color: #000000;
-      }
-      p {
-        font-size: 1.25rem;
-        color: #525252;
-      }
-    }
+.top-side {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left {
+  width: 15%;
+}
+
+.left img {
+  height: 50px;
+}
+
+.right {
+  width: 70%;
+  font-weight: 600;
+}
+
+.right h1 {
+  font-size: 1.5rem; 
+  color: #000000;
+}
+
+.right p {
+  color: #525252;
+}
+
+.bottom-side {
+  color: #525252;
+}
+
+.bottom-side p {
+  font-size: 1.75rem; 
+}
+
+@media (max-width: 768px) {
+  .placement {
+    height: 60vh;
   }
-  .bottom-side {
-    color: #525252;
-    p {
-      font-size: 1.75rem;
-      @media (max-width: 376px) {
-        font-size: 1rem;
-      }
-    }
-  }
-  @media (max-width: 376px) {
+}
+
+@media (max-width: 376px) {
+  .container-testimonial {
     width: 350px;
     height: 250px;
+  }
+  .left {
+    width: 25%;
+  }
+  .bottom-side p {
+    font-size: 1rem; /
   }
 }
