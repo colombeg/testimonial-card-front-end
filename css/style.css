@@ -52,10 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 2px 0.5px #d2d6db;
-  @media (max-width: 376px) {
-    width: 350px;
-    height: 250px;
-  }
+
   .top-side {
     display: flex;
     align-items: center;
@@ -90,5 +87,9 @@ body {
         font-size: 1rem;
       }
     }
+  }
+  @media (max-width: 376px) {
+    width: 350px;
+    height: 250px;
   }
 }
